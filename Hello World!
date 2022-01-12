@@ -1,0 +1,7 @@
+// This is my first code in Github, and I just learnt C Programming language for 2 days. 
+#include <stdio.h>
+int main(void)
+{
+    printf("Hello World!\n");
+    return 0;
+}
