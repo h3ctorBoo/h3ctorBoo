@@ -1,0 +1,18 @@
+//Every time you buy 4 cups of coffee, then one cup will be free, and the tax rate is %13
+#include <stdio.h>
+int main(void){
+#define HST 0.13
+	double single_cup_fee, tax, total;
+	int cupNum, freeNum, payNum;
+	printf("Enter the fee for a single cup: ");
+	scanf_s("%lf", &single_cup_fee);
+	printf("Enter #of cups: \n");
+	scanf_s("%d", &cupNum);
+	freeNum = cupNum / 4;
+	payNum = cupNum - freeNum;
+	printf("Total cups for free:%d\n", freeNum);
+	tax = single_cup_fee * payNum * HST;
+	total = tax + single_cup_fee * payNum;
+	printf("Total charge (after tax): %.2lf\n", total);
+	return 0;
+}
