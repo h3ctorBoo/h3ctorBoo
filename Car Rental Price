@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main(void){
+  #define HST 0.15
+  double total_price, daily_rate, tax;
+  int rental_period, free_day, pay_day;
+    printf("Enter the daily rate: ");
+    scanf("%lf", &daily_rate);
+    printf("Enter the rental period (in days): \n");
+    scanf("%d", &rental_period);
+  free_day = rental_period / 4;
+  pay_day = rental_period - free_day;
+  tax = pay_day * daily_rate * HST;
+  total_price = tax + pay_day * daily_rate;
+  printf("Your total free day(s) in this rental is: %d\n", free_day);
+  printf("Your total charge including taxes is: %.2lf", total_price);
+  return 0;
+}
