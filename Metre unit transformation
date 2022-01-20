@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main(void) {
+	double metres,remainder,Totalinches;
+    int yard, feet,inches;
+    printf("Please provide a distance in metres: ");
+    scanf("%lf", &metres);
+    Totalinches = metres / 0.0254;
+    yard = Totalinches / 36;
+    feet = (Totalinches - yard * 36) / 12;
+    inches = (Totalinches - yard * 36 -feet * 12);
+    remainder = (Totalinches - yard * 36 - feet * 12);
+    printf("%d yards, %d feet, %d inches, %.2lf inches remainder", yard,feet,inches,remainder);
+    return 0;
+}
